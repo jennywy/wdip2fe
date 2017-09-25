@@ -12,14 +12,65 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body class="container-fluid">
-      <h1>Example</h1>
-
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-      ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.</p>
+      <p id="message"></p>
+      <form id='sign-up'>
+            <fieldset>
+              <legend>Sign Up!</legend>
+              <input name="credentials[email]" type="text" placeholder="email address">
+              <input name="credentials[password]" type="password" placeholder="password">
+              <input name="credentials[password_confirmation]" type="password" placeholder="confirm password">
+              <input type="submit" name="submit" value="Sign up!">
+            </fieldset>
+          </form>
+          <form id='sign-in'>
+            <fieldset>
+              <legend>Sign In!</legend>
+              <input name="credentials[email]" type="text" placeholder="email">
+              <input name="credentials[password]" type="password" placeholder="password">
+              <input type="submit" name="submit" value="Sign in!">
+            </fieldset>
+          </form>
+          <form id="sign-out">
+            <fieldset>
+              <legend>Sign Out</legend>
+              <input type="submit" name="submit" value="Sign out">
+            </fieldset>
+          </form>
+          <form id="change-password">
+            <fieldset>
+              <legend>Change Password</legend>
+              <input type="password" name="passwords[old]" id="change-password-old" placeholder="Old Password">
+              <input type="password" name="passwords[new]" id="change-password-new" placeholder="New Password">
+              <input type="submit" name="submit" value="Change Password!">
+            </fieldset>
+          </form>
+          <!-- Display Language table with Handlebars hurrrr  -->
+          <form id ="add-langs">
+            <fieldset>
+              <legend>Add a language</legend>
+              <input type="text" name="userlanguages[user_id]" placeholder="User ID">
+              <input type="text" name="userlanguages[language_id]" placeholder="Language ID">
+              <input type="text" name="userlanguages[level]" placeholder="Level">
+              <input type="submit" name="submit" value="Add a language">
+            </fieldset>
+          </form>
+          <form id="list-langs">
+          <legend>See your languages</legend>
+          <input type="submit" name="submit" value="See your language list">
+        </form>
+        <form id="edit-langs">
+          <legend>Update your language level</legend>
+          <input type="text" name="userlanguages[user_id]" placeholder="User ID">
+          <input type="text" name="userlanguages[language_id]" placeholder="Language ID">
+          <input type="text" name="userlanguages[level]" placeholder="Update your level">
+        </form>
+        <form id ="delete-langs">
+          <fieldset>
+            <legend>Have amnesia or decide you don't care? Delete a language</legend>
+            <input type="text" name="userlanguages[user_id]" placeholder="User ID">
+            <input type="text" name="userlanguages[language_id]" placeholder="Language ID">
+            <input type="submit" name="submit" value="Remove a language">
+          </fieldset>
+        </form>
     </body>
 </html>
