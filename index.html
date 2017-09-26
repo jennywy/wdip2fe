@@ -16,6 +16,7 @@
       <form id='sign-up'>
             <fieldset>
               <legend>Sign Up!</legend>
+              <input name="credentials[name]" type="text" placeholder="name">
               <input name="credentials[email]" type="text" placeholder="email address">
               <input name="credentials[password]" type="password" placeholder="password">
               <input name="credentials[password_confirmation]" type="password" placeholder="confirm password">
@@ -52,23 +53,23 @@
           <form id="add-langs">
             <fieldset>
               <legend>Add a language</legend>
-              <input type="number" name="userlanguages[language_id]" placeholder="ID">
-              <input type="text" name="userlanguages[level]" placeholder="Level">
+              <input type="number" name="userlanguage[language_id]" placeholder="Language ID">
+              <input type="text" name="userlanguage[level]" placeholder="Level">
               <input type="submit" name="submit" value="Add a language">
             </fieldset>
           </form>
         <form id="edit-langs">
           <fieldset>
           <legend>Update your language level</legend>
-          <input type="text" name="userlanguages[id]" placeholder="ID">
-          <input type="text" name="userlanguages[level]" placeholder="Update your level">
+          <input type="text" name="userlanguage[id]" placeholder="ID">
+          <input type="text" name="userlanguage[level]" placeholder="Update your level">
           <input type="submit" name="submit" value="Add a language">
         </fieldset>
         </form>
         <form id ="delete-langs">
           <fieldset>
             <legend>Have amnesia or decide you don't care? Delete a language</legend>
-            <input type="text" name="userlanguages[id]" placeholder="ID">
+            <input type="text" name="userlanguage[id]" placeholder="ID">
             <input type="submit" name="submit" value="Remove a language">
           </fieldset>
         </form>
