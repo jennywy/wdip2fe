@@ -1,0 +1,17 @@
+<table>
+  <tr>
+    <th>Record ID
+    </th>
+    <th>Language
+    </th>
+    <th>Level
+    </th>
+  </tr>
+{{#each userlanguages as |userlanguage|}}
+<tr data-id="{{userlanguage.id}}">
+  <td>{{userlanguage.id}}</td>
+  <td>{{userlanguage.language.name}}</td>
+  <td>{{userlanguage.level}}</td>
+</tr>
+{{/each}}
+</table>
