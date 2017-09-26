@@ -27,6 +27,10 @@ const deleteSuccess = function (data) {
   $('#message').text('Deleted!')
 }
 
+const updateSuccess = function (data) {
+  $('#message').text('Updated!')
+}
+
 const fail = function (error) {
   console.log(error)
   $('.content').text('Something broke')
@@ -36,5 +40,6 @@ module.exports = {
   addSuccess,
   getLanguagesSuccess,
   deleteSuccess,
+  updateSuccess,
   fail
 }

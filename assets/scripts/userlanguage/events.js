@@ -20,12 +20,9 @@ const onAddLanguage = (event) => {
 const onUpdateLanguage = (event) => {
   event.preventDefault()
   const data = getFormFields(event.target)
-  const id = data.id
-  console.log(data)
-  console.log(data.id)
-  console.log(id)
+  const id = data.userlanguage.id
   api.update(id, data)
-    .then(ui.addSuccess)
+    .then(ui.updateSuccess)
     .catch(ui.fail)
 }
 
