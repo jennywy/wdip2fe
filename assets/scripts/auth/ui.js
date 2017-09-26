@@ -1,5 +1,5 @@
 'use strict'
-const store = require('./store')
+const store = require('../store')
 
 const signUpSuccess = function (data) {
   $('#message').text('Successfully signed up')
@@ -14,11 +14,9 @@ const signInSuccess = function (data) {
   $('#message').text('Successfully signed in')
   store.user = data.user
   $('#sign-up').hide()
-  // $('#sign-in').hide()
+  $('#sign-in').hide()
   $('#sign-out').show()
   $('#change-password').show()
-  $('#start-game').show()
-  $('#join-game').show()
   $('#get-game').show()
   $('#get-games').show()
 }
