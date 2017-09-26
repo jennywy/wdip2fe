@@ -12,15 +12,19 @@
 // }
 const showUserLangsTemplate = require('../templates/helpers/userlanguages.handlebars')
 
-const addSuccess = function (data) {
+const getLanguagesSuccess = function (data) {
   const showUserLangsHtml = showUserLangsTemplate({ userlanguages: data.userlanguages })
   $('.content').append(showUserLangsHtml)
-  $('.message').text('Listed!')
+  $('#message').text('Listed!')
 }
 
-const getLanguagesSuccess = function (data) {
+const addSuccess = function (data) {
   const showUserLangsHtml = showUserLangsTemplate({ userlanguages: data })
   $('.content').append(showUserLangsHtml)
+}
+
+const deleteSuccess = function (data) {
+  $('#message').text('Deleted!')
 }
 
 const fail = function (error) {
@@ -31,5 +35,6 @@ const fail = function (error) {
 module.exports = {
   addSuccess,
   getLanguagesSuccess,
+  deleteSuccess,
   fail
 }

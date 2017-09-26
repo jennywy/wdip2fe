@@ -16,10 +16,13 @@ const create = function (data) {
   })
 }
 
-const update = function (data) {
+const update = function (id, data) {
   return $.ajax({
-    url: config.apiOrigin + '/userlanguages/' + store.userlanguages.id,
+    url: config.apiOrigin + '/userlanguages/' + id,
     method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
     data
   })
 }
@@ -36,7 +39,7 @@ const index = function () {
 
 const show = function (id) {
   return $.ajax({
-    url: config.apiOrigin + '/userlanguages/' + id,
+    url: config.apiOrigin + '/userlanguages/' + store.user.id,
     method: 'GET'
   })
 }
@@ -44,9 +47,13 @@ const show = function (id) {
 const destroy = function (id) {
   return $.ajax({
     url: config.apiOrigin + '/userlanguages/' + id,
-    method: 'DELETE'
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
   })
 }
+
 module.exports = {
   create,
   update,

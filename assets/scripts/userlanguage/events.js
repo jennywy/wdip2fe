@@ -5,7 +5,7 @@ const ui = require('./ui')
 const onGetLanguages = (event) => {
   event.preventDefault()
   api.index()
-    .then(ui.addSuccess)
+    .then(ui.getLanguagesSuccess)
     .catch(ui.fail)
 }
 
@@ -13,25 +13,28 @@ const onAddLanguage = (event) => {
   event.preventDefault()
   const data = getFormFields(event.target)
   api.create(data)
-    .then(ui.getLanguagesSuccess)
+    .then(ui.addSuccess)
     .catch(ui.fail)
 }
 
 const onUpdateLanguage = (event) => {
   event.preventDefault()
   const data = getFormFields(event.target)
+  const id = data.id
   console.log(data)
-  api.update(data)
-    .then(console.log('update win'))
-    .catch(console.log('update lose'))
+  console.log(data.id)
+  console.log(id)
+  api.update(id, data)
+    .then(ui.addSuccess)
+    .catch(ui.fail)
 }
 
 const onDeleteLanguage = (event) => {
   event.preventDefault()
   const data = getFormFields(event.target)
-  api.destroy(data)
-    .then(console.log('delete win'))
-    .catch(console.log('delete lose'))
+  api.destroy(data.userlanguage.id)
+    .then(ui.deleteSuccess)
+    .catch(ui.fail)
 }
 
 const addHandlers = () => {
