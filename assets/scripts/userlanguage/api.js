@@ -4,8 +4,6 @@ const config = require('../config')
 // const getFormFields = require('/Users/jennyyee/wdi/projects/tictactoe/lib/get-form-fields.js')
 
 const create = function (data) {
-  console.log(store.user.token)
-  console.log(data)
   return $.ajax({
     url: config.apiOrigin + '/userlanguages',
     method: 'POST',

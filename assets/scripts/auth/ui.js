@@ -35,7 +35,6 @@ const signOutSuccess = function () {
   $('#sign-up').show()
   $('#sign-out').hide()
   $('#change-password').hide()
-  $('#message').text(null)
   $('#content').text(null)
 }
 

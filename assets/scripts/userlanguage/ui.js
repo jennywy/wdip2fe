@@ -30,10 +30,9 @@ const updateSuccess = function (data) {
   $('#message').text('Updated!')
 }
 
-const fail = function (error) {
+const fail = function () {
   $('#content').text(null)
   $('#message').text('Something broke!')
-  console.log(error)
 }
 
 module.exports = {
