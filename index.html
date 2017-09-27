@@ -1,79 +1,93 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Gabby, a Language Level Tracker</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>Gabby, a Language Level Tracker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body class="container-fluid">
-      <p id="message"></p>
-      <form id='sign-up'>
-            <fieldset>
-              <legend>Sign Up!</legend>
-              <input name="credentials[name]" type="text" placeholder="name">
-              <input name="credentials[email]" type="text" placeholder="email address">
-              <input name="credentials[password]" type="password" placeholder="password">
-              <input name="credentials[password_confirmation]" type="password" placeholder="confirm password">
-              <input type="submit" name="submit" value="Sign up!">
-            </fieldset>
-          </form>
-          <form id='sign-in'>
-            <fieldset>
-              <legend>Sign In!</legend>
-              <input name="credentials[email]" type="text" placeholder="email">
-              <input name="credentials[password]" type="password" placeholder="password">
-              <input type="submit" name="submit" value="Sign in!">
-            </fieldset>
-          </form>
-          <form id="sign-out">
-            <fieldset>
-              <legend>Sign Out</legend>
-              <input type="submit" name="submit" value="Sign out">
-            </fieldset>
-          </form>
-          <form id="change-password">
-            <fieldset>
-              <legend>Change Password</legend>
-              <input type="password" name="passwords[old]" id="change-password-old" placeholder="Old Password">
-              <input type="password" name="passwords[new]" id="change-password-new" placeholder="New Password">
-              <input type="submit" name="submit" value="Change Password!">
-            </fieldset>
-          </form>
-          <p>Display Language table with Handlebars hurrrr</p>
-          <form id="list-langs">
-          <legend>See your languages</legend>
-          <input type="submit" name="submit" value="See your language list">
-        </form>
-          <form id="add-langs">
-            <fieldset>
-              <legend>Add a language</legend>
-              <input type="number" name="userlanguage[language_id]" placeholder="Language ID">
-              <input type="text" name="userlanguage[level]" placeholder="Level">
-              <input type="submit" name="submit" value="Add a language">
-            </fieldset>
-          </form>
-        <form id="edit-langs">
-          <fieldset>
-          <legend>Update your language level</legend>
-          <input type="number" name="userlanguage[id]" placeholder="ID">
-          <input type="text" name="userlanguage[level]" placeholder="New Level">
-          <input type="submit" name="submit" value="Update a language level">
-        </fieldset>
-        </form>
-        <form id ="delete-langs">
-          <fieldset>
-            <legend>Have amnesia or decide you don't care? Delete a language</legend>
-            <input type="number" name="userlanguage[id]" placeholder="ID">
-            <input type="submit" name="submit" value="Remove a language">
-          </fieldset>
-        </form>
-        <div id="content" class="content">
-        </div>
-    </body>
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body class="container-fluid">
+  <form id="sign-up" class "content">
+    <fieldset>
+      <legend>Sign Up!</legend>
+      <input name="credentials[name]" type="text" placeholder="name">
+      <input name="credentials[email]" type="text" placeholder="email address">
+      <input name="credentials[password]" type="password" placeholder="password">
+      <input name="credentials[password_confirmation]" type="password" placeholder="confirm password">
+      <input type="submit" name="submit" value="Sign up!">
+    </fieldset>
+  </form>
+  <form id="sign-in" class="content">
+    <fieldset>
+      <legend>Sign In!</legend>
+      <input name="credentials[email]" type="text" placeholder="email">
+      <input name="credentials[password]" type="password" placeholder="password">
+      <input type="submit" name="submit" value="Sign in!">
+    </fieldset>
+  </form>
+  <form id="sign-out" class="content">
+    <fieldset>
+      <legend>Sign Out</legend>
+      <input type="submit" name="submit" value="Sign out">
+    </fieldset>
+  </form>
+  <form id="change-password" class="content">
+    <fieldset>
+      <legend>Change Password</legend>
+      <input type="password" name="passwords[old]" id="change-password-old" placeholder="Old Password">
+      <input type="password" name="passwords[new]" id="change-password-new" placeholder="New Password">
+      <input type="submit" name="submit" value="Change Password!">
+    </fieldset>
+  </form>
+  <p id="message" class="content"></p>
+  <p>Choose a language here:
+    <ol>
+      <li>C++</li>
+      <li>Java</li>
+      <li>Javascript</li>
+      <li>R</li>
+      <li>Ruby</li>
+      <li>Rails</li>
+      <li>PHP</li>
+      <li>Python</li>
+    </ol>
+  </p>
+  <form id="list-langs" class="content">
+    <legend>See everyone's languages and level</legend>
+    <input type="submit" name="submit" value="Submit">
+  </form>
+  <form id="add-langs" class="content">
+    <fieldset>
+      <legend>Add your language and level </legend>
+      <input type="number" name="userlanguage[language_id]" placeholder="Language ID">
+      <input type="text" name="userlanguage[level]" placeholder="Level">
+      <input type="submit" name="submit" value="Add a language">
+    </fieldset>
+  </form>
+  <form id="edit-langs" class="content">
+    <fieldset>
+      <legend>Update your language level</legend>
+      <input type="number" name="userlanguage[id]" placeholder="ID">
+      <input type="text" name="userlanguage[level]" placeholder="New Level">
+      <input type="submit" name="submit" value="Update a language level">
+    </fieldset>
+  </form>
+  <form id="delete-langs" class="content">
+    <fieldset>
+      <legend>Have amnesia or decide you don't care? Delete a language</legend>
+      <input type="number" name="userlanguage[id]" placeholder="ID">
+      <input type="submit" name="submit" value="Remove a language">
+    </fieldset>
+  </form>
+  <div id="content" class="content">
+  </div>
+</body>
+
 </html>
