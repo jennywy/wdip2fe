@@ -2,18 +2,18 @@
 const store = require('../store')
 
 const signUpSuccess = function (data) {
-  $('.content').trigger('reset')
+  $('.clearform').trigger('reset')
   $('#message').text('Successfully signed up')
   $('#sign-up').hide()
 }
 
 const signUpFailure = function () {
-  $('.content').trigger('reset')
+  $('.clearform').trigger('reset')
   $('#message').text('Error on sign up')
 }
 
 const signInSuccess = function (data) {
-  $('.content').trigger('reset')
+  $('.clearform').trigger('reset')
   $('#message').text('Successfully signed in')
   store.user = data.user
   $('#sign-up').hide()
@@ -27,7 +27,7 @@ const signInFailure = function () {
 }
 
 const signOutSuccess = function () {
-  $('.content').trigger('reset')
+  $('.clearform').trigger('reset')
   $('#message').text('Signed Out Successfully')
   store.user = null
   $('#sign-in').show()
@@ -44,7 +44,7 @@ const signOutFailure = function () {
 
 const changePasswordSuccess = function () {
   $('#message').text('Changed password successfully')
-  $('.content').trigger('reset')
+  $('.clearform').trigger('reset')
 }
 
 const changePasswordFailure = function () {

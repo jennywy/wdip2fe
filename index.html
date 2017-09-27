@@ -14,31 +14,31 @@
 </head>
 
 <body class="container-fluid">
-  <form id="sign-up" class "content">
+  <form id="sign-up" class="clearform">
     <fieldset>
       <legend>Sign Up!</legend>
-      <input name="credentials[name]" type="text" placeholder="name">
-      <input name="credentials[email]" type="text" placeholder="email address">
-      <input name="credentials[password]" type="password" placeholder="password">
-      <input name="credentials[password_confirmation]" type="password" placeholder="confirm password">
+      <input name="credentials[name]" type="text" placeholder="Username">
+      <input name="credentials[email]" type="text" placeholder="Email address">
+      <input name="credentials[password]" type="password" placeholder="Password">
+      <input name="credentials[password_confirmation]" type="password" placeholder="Confirm Password">
       <input type="submit" name="submit" value="Sign up!">
     </fieldset>
   </form>
-  <form id="sign-in" class="content">
+  <form id="sign-in" class="clearform">
     <fieldset>
       <legend>Sign In!</legend>
-      <input name="credentials[email]" type="text" placeholder="email">
-      <input name="credentials[password]" type="password" placeholder="password">
+      <input name="credentials[email]" type="text" placeholder="Email">
+      <input name="credentials[password]" type="password" placeholder="Password">
       <input type="submit" name="submit" value="Sign in!">
     </fieldset>
   </form>
-  <form id="sign-out" class="content">
+  <form id="sign-out" class="clearform">
     <fieldset>
       <legend>Sign Out</legend>
       <input type="submit" name="submit" value="Sign out">
     </fieldset>
   </form>
-  <form id="change-password" class="content">
+  <form id="change-password" class="clearform">
     <fieldset>
       <legend>Change Password</legend>
       <input type="password" name="passwords[old]" id="change-password-old" placeholder="Old Password">
@@ -46,8 +46,7 @@
       <input type="submit" name="submit" value="Change Password!">
     </fieldset>
   </form>
-  <p id="message" class="content"></p>
-  <p>Choose a language here:
+  <p><h1>Choose a language here:</h1>
     <ol>
       <li>C++</li>
       <li>Java</li>
@@ -59,11 +58,11 @@
       <li>Python</li>
     </ol>
   </p>
-  <form id="list-langs" class="content">
+  <form id="list-langs" class="clearform">
     <legend>See everyone's languages and level</legend>
     <input type="submit" name="submit" value="Submit">
   </form>
-  <form id="add-langs" class="content">
+  <form id="add-langs" class="clearform">
     <fieldset>
       <legend>Add your language and level </legend>
       <input type="number" name="userlanguage[language_id]" placeholder="Language ID">
@@ -71,7 +70,7 @@
       <input type="submit" name="submit" value="Add a language">
     </fieldset>
   </form>
-  <form id="edit-langs" class="content">
+  <form id="edit-langs" class="clearform">
     <fieldset>
       <legend>Update your language level</legend>
       <input type="number" name="userlanguage[id]" placeholder="ID">
@@ -79,13 +78,14 @@
       <input type="submit" name="submit" value="Update a language level">
     </fieldset>
   </form>
-  <form id="delete-langs" class="content">
+  <form id="delete-langs" class="clearform">
     <fieldset>
       <legend>Have amnesia or decide you don't care? Delete a language</legend>
       <input type="number" name="userlanguage[id]" placeholder="ID">
       <input type="submit" name="submit" value="Remove a language">
     </fieldset>
   </form>
+  <p id="message"></p>
   <div id="content" class="content">
   </div>
 </body>
