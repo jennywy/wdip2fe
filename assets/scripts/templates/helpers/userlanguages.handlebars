@@ -6,12 +6,15 @@
     </th>
     <th>Level
     </th>
+    <th>Username
+    </th>
   </tr>
 {{#each userlanguages as |userlanguage|}}
 <tr data-id="{{userlanguage.id}}">
   <td>{{userlanguage.id}}</td>
   <td>{{userlanguage.language.name}}</td>
   <td>{{userlanguage.level}}</td>
+  <td>{{userlanguage.user.name}}
 </tr>
 {{/each}}
 </table>
