@@ -2,7 +2,7 @@
 
 const config = {
   apiOrigins: {
-    production: 'https://jwywdip2.herokuapp.com/',
+    production: 'https://jwywdip2.herokuapp.com',
     development: 'http://localhost:4741'
   }
 }
