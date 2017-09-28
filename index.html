@@ -65,7 +65,17 @@
   <form id="add-langs" class="clearform">
     <fieldset>
       <legend>Add your language and level </legend>
-      <input type="number" name="userlanguage[language_id]" placeholder="Language ID">
+      <select name="userlanguage[language_id]" type="number">
+        <option>Choose one</option>
+        <option value="1">C++</option>
+        <option value="2">Java</option>
+        <option value="3">Javascript</option>
+        <option value="4">R</option>
+        <option value="5">Ruby</option>
+        <option value="6">Rails</option>
+        <option value="7">PHP</option>
+        <option value="8">Python</option>
+      </select>
       <select name="userlanguage[level]">
         <option>Choose one</option>
         <option value="Beginner">Beginner</option>
