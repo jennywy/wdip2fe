@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Gabby, a Language Level Tracker</title>
+  <title>Gabby</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Do not add `link` tags-->
@@ -14,6 +14,9 @@
 </head>
 
 <body class="container-fluid">
+  <h1>Gabby</h1>
+  <h3>A Language Level Tracker</h3>
+  <h6>(for matching users with each other eventually maybe?)</h6>
   <form id="sign-up" class="clearform">
     <fieldset>
       <legend>Sign Up!</legend>
@@ -46,23 +49,14 @@
       <input type="submit" name="submit" value="Change Password!">
     </fieldset>
   </form>
-  <p><h1>Choose a language here:</h1>
-    <ol>
-      <li>C++</li>
-      <li>Java</li>
-      <li>Javascript</li>
-      <li>R</li>
-      <li>Ruby</li>
-      <li>Rails</li>
-      <li>PHP</li>
-      <li>Python</li>
-    </ol>
-  </p>
-  <form id="list-langs" class="clearform">
+  <p id="message"></p>
+  <div id="content" class="content">
+  </div>
+  <form id="list-langs" class="after clearform">
     <legend>See everyone's languages and level</legend>
     <input type="submit" name="submit" value="Submit">
   </form>
-  <form id="add-langs" class="clearform">
+  <form id="add-langs" class="after clearform">
     <fieldset>
       <legend>Add your language and level </legend>
       <select name="userlanguage[language_id]" type="number">
@@ -86,10 +80,10 @@
       <input type="submit" name="submit" value="Add a language">
     </fieldset>
   </form>
-  <form id="edit-langs" class="clearform">
+  <form id="edit-langs" class="after clearform">
     <fieldset>
       <legend>Update your language level</legend>
-      <input type="number" name="userlanguage[id]" placeholder="ID">
+      <input type="number" name="userlanguage[id]" placeholder="Record ID">
       <select name="userlanguage[level]">
         <option>Choose one</option>
         <option value="Beginner">Beginner</option>
@@ -100,16 +94,13 @@
       <input type="submit" name="submit" value="Update a language level">
     </fieldset>
   </form>
-  <form id="delete-langs" class="clearform">
+  <form id="delete-langs" class="after clearform">
     <fieldset>
       <legend>Have amnesia or decide you don't care? Delete a language</legend>
-      <input type="number" name="userlanguage[id]" placeholder="ID">
+      <input type="number" name="userlanguage[id]" placeholder="Record ID">
       <input type="submit" name="submit" value="Remove a language">
     </fieldset>
   </form>
-  <p id="message"></p>
-  <div id="content" class="content">
-  </div>
 </body>
 
 </html>

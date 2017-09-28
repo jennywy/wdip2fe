@@ -11,6 +11,7 @@ $(() => {
   languageEvents.addHandlers()
   $('#sign-out').hide()
   $('#change-password').hide()
+  $('.after').hide()
 })
 
 // use require with a reference to bundle the file and use it in this file
